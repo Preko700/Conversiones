@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras Estequiométricas | EstequiometríaWeb</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EstequiometríaWeb</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría</a></li>
+                <li><a href="calculadoras.html">Calculadoras</a></li>
+                <li><a href="ejemplos.html">Ejemplos</a></li>
+                <li><a href="practica.html">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculators-intro">
+            <div class="container">
+                <h1>Calculadoras Estequiométricas</h1>
+                <p>Utiliza estas calculadoras para resolver problemas de estequiometría paso a paso</p>
+                
+                <div class="calculator-nav">
+                    <a href="#conversiones" class="btn-secondary">Conversiones</a>
+                    <a href="#limitante" class="btn-secondary">Reactante Límite</a>
+                    <a href="#rendimiento" class="btn-secondary">Rendimiento</a>
+                    <a href="#mol-masa" class="btn-secondary">Mol-Masa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculadora de Conversión Mol-Masa-Partículas -->
+        <section id="mol-masa" class="calculator-container">
+            <h2>Conversiones Mol-Masa-Partículas</h2>
+            <p>Convierte entre moles, gramos y número de moléculas/átomos</p>
+            
+            <form id="conversionForm">
+                <div class="form-group">
+                    <label for="formula">Fórmula química:</label>
+                    <input type="text" id="formula" placeholder="Ej: H2O, NaCl, C6H12O6" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fromUnit">Convertir desde:</label>
+                    <select id="fromUnit" required>
+                        <option value="moles">Moles</option>
+                        <option value="gramos">Gramos</option>
+                        <option value="particulas">Partículas (moléculas/átomos)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="amount">Cantidad:</label>
+                    <input type="number" id="amount" min="0" step="any" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="toUnit">Convertir a:</label>
+                    <select id="toUnit" required>
+                        <option value="moles">Moles</option>
+                        <option value="gramos">Gramos</option>
+                        <option value="particulas">Partículas (moléculas/átomos)</option>
+                    </select>
+                </div>
+                
+                <button type="button" onclick="calculateConversion()">Calcular</button>
+            </form>
+            
+            <div id="conversionResult" class="result-box">
+                <!-- Resultados se mostrarán aquí -->
+            </div>
+        </section>
+        
+        <!-- Calculadora de Reactante Limitante -->
+        <section id="limitante" class="calculator-container">
+            <h2>Reactante Limitante y Reactante en Exceso</h2>
+            <p>Determina cuál es el reactante limitante y cuánto queda del reactante en exceso</p>
+            
+            <form id="limitanteForm">
+                <div class="form-group">
+                    <label for="ecuacion">Ecuación química balanceada:</label>
+                    <input type="text" id="ecuacion" placeholder="Ej: 2H2 + O2 → 2H2O" required>
+                </div>
+                
+                <div id="reactantes-container">
+                    <h3>Reactantes:</h3>
+                    <div class="reactante-input">
+                        <div class="form-group">
+                            <label>Reactante 1:</label>
+                            <select class="reactante-selector">
+                                <!-- Se llenará dinámicamente -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Cantidad:</label>
+                            <input type="number" class="reactante-cantidad" min="0" step="any" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Unidad:</label>
+                            <select class="reactante-unidad">
+                                <option value="moles">moles</option>
+                                <option value="gramos">gramos</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="reactante-input">
+                        <div class="form-group">
+                            <label>Reactante 2:</label>
+                            <select class="reactante-selector">
+                                <!-- Se llenará dinámicamente -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Cantidad:</label>
+                            <input type="number" class="reactante-cantidad" min="0" step="any" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Unidad:</label>
+                            <select class="reactante-unidad">
+                                <option value="moles">moles</option>
+                                <option value="gramos">gramos</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="add-reactante">+ Añadir otro reactante</button>
+                </div>
+                
+                <div class="form-group">
+                    <label for="producto">Producto a calcular:</label>
+                    <select id="producto-selector">
+                        <!-- Se llenará dinámicamente -->
+                    </select>
+                </div>
+                
+                <button type="button" onclick="calculateLimitante()">Calcular</button>
+            </form>
+            
+            <div id="limitanteResult" class="result-box">
+                <!-- Resultados se mostrarán aquí -->
+            </div>
+        </section>
+        
+        <!-- Calculadora de Rendimiento -->
+        <section id="rendimiento" class="calculator-container">
+            <h2>Rendimiento de Reacciones</h2>
+            <p>Calcula el rendimiento teórico, real y porcentual de una reacción química</p>
+            
+            <form id="rendimientoForm">
+                <div class="form-group">
+                    <label for="ecuacion-rendimiento">Ecuación química balanceada:</label>
+                    <input type="text" id="ecuacion-rendimiento" placeholder="Ej: 2H2 + O2 → 2H2O" required>
+                </div>
+                
+                <div id="reactantes-rendimiento-container">
+                    <h3>Reactantes disponibles:</h3>
+                    <!-- El contenido se generará dinámicamente similar al de la calculadora de reactante limitante -->
+                </div>
+                
+                <div class="form-group">
+                    <label for="producto-rendimiento">Producto a calcular:</label>
+                    <select id="producto-rendimiento-selector">
+                        <!-- Se llenará dinámicamente -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rendimiento-experimental">Rendimiento experimental (opcional):</label>
+                    <div class="input-group">
+                        <input type="number" id="rendimiento-experimental" min="0" step="any">
+                        <select id="unidad-rendimiento">
+                            <option value="gramos">gramos</option>
+                            <option value="moles">moles</option>
+                        </select>
+                    </div>
+                    <small>Dejar en blanco para calcular solo el rendimiento teórico</small>
+                </div>
+                
+                <button type="button" onclick="calculateRendimiento()">Calcular</button>
+            </form>
+            
+            <div id="rendimientoResult" class="result-box">
+                <!-- Resultados se mostrarán aquí -->
+            </div>
+        </section>
+        
+        <!-- Calculadora de Conversiones Estequiométricas -->
+        <section id="conversiones" class="calculator-container">
+            <h2>Conversiones Estequiométricas</h2>
+            <p>Calcula relaciones estequiométricas en una reacción química</p>
+            
+            <form id="conversionesForm">
+                <div class="form-group">
+                    <label for="ecuacion-conversiones">Ecuación química balanceada:</label>
+                    <input type="text" id="ecuacion-conversiones" placeholder="Ej: 2H2 + O2 → 2H2O" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>De:</label>
+                    <div class="conversion-from">
+                        <select id="sustancia-from">
+                            <!-- Se llenará dinámicamente -->
+                        </select>
+                        
+                        <input type="number" id="cantidad-from" min="0" step="any" required>
+                        
+                        <select id="unidad-from">
+                            <option value="moles">moles</option>
+                            <option value="gramos">gramos</option>
+                            <option value="litros">litros (gases)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>A:</label>
+                    <div class="conversion-to">
+                        <select id="sustancia-to">
+                            <!-- Se llenará dinámicamente -->
+                        </select>
+                        
+                        <select id="unidad-to">
+                            <option value="moles">moles</option>
+                            <option value="gramos">gramos</option>
+                            <option value="litros">litros (gases)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="condiciones">Condiciones (para gases):</label>
+                    <select id="condiciones">
+                        <option value="estandar">Condiciones estándar (0°C, 1 atm)</option>
+                        <option value="ambiente">Temperatura ambiente (25°C, 1 atm)</option>
+                        <option value="personalizado">Personalizado</option>
+                    </select>
+                </div>
+                
+                <div id="condiciones-personalizadas" style="display: none;">
+                    <div class="form-group">
+                        <label for="temperatura">Temperatura:</label>
+                        <input type="number" id="temperatura" value="25" step="any">
+                        <select id="temp-unidad">
+                            <option value="C">°C</option>
+                            <option value="K">K</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="presion">Presión:</label>
+                        <input type="number" id="presion" value="1" step="any">
+                        <select id="presion-unidad">
+                            <option value="atm">atm</option>
+                            <option value="kPa">kPa</option>
+                            <option value="mmHg">mmHg</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="button" onclick="calculateEstequiometria()">Calcular</button>
+            </form>
+            
+            <div id="conversionesResult" class="result-box">
+                <!-- Resultados se mostrarán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EstequiometríaWeb - Creado para ayudar a estudiantes a dominar la estequiometría</p>
+    </footer>
+
+    <script src="calculadoras.js"></script>
+</body>
+</html>

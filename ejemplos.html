@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Estequiométricos | EstequiometríaWeb</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="teoria-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EstequiometríaWeb</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría</a></li>
+                <li><a href="calculadoras.html">Calculadoras</a></li>
+                <li><a href="ejemplos.html">Ejemplos</a></li>
+                <li><a href="practica.html">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Ejemplos Resueltos de Estequiometría</h1>
+                <p>Aprende a través de problemas resueltos paso a paso</p>
+            </div>
+        </section>
+
+        <section class="ejemplos-nav">
+            <div class="container">
+                <ul class="teoria-menu">
+                    <li><a href="#conversiones">Conversiones Mol-Masa</a></li>
+                    <li><a href="#reacciones">Estequiometría de Reacciones</a></li>
+                    <li><a href="#limitante">Reactante Limitante</a></li>
+                    <li><a href="#rendimiento">Rendimiento</a></li>
+                    <li><a href="#gases">Estequiometría con Gases</a></li>
+                    <li><a href="#soluciones">Soluciones</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="conversiones" class="teoria-section">
+            <div class="container">
+                <h2>Ejemplos de Conversiones Mol-Masa</h2>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 1: Conversión gramos a moles</h3>
+                    <p><strong>Problema:</strong> ¿Cuántos moles hay en 45.0 g de glucosa (C₆H₁₂O₆)?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos la masa molar de la glucosa:
+                                <ul>
+                                    <li>C: 6 × 12.011 g/mol = 72.066 g/mol</li>
+                                    <li>H: 12 × 1.008 g/mol = 12.096 g/mol</li>
+                                    <li>O: 6 × 16.00 g/mol = 96.00 g/mol</li>
+                                    <li>Masa molar C₆H₁₂O₆ = 72.066 + 12.096 + 96.00 = 180.162 g/mol</li>
+                                </ul>
+                            </li>
+                            <li>Aplicamos la fórmula de conversión:
+                                <p>Moles = Masa (g) ÷ Masa molar (g/mol)</p>
+                                <p>Moles = 45.0 g ÷ 180.162 g/mol = 0.250 mol</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Hay 0.250 moles de glucosa en 45.0 g.</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 2: Conversión moles a partículas</h3>
+                    <p><strong>Problema:</strong> ¿Cuántas moléculas hay en 0.35 moles de CO₂?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Utilizamos el número de Avogadro para la conversión:
+                                <p>Número de moléculas = Moles × N<sub>A</sub></p>
+                                <p>Número de moléculas = 0.35 mol × 6.022 × 10²³ moléculas/mol</p>
+                                <p>Número de moléculas = 2.11 × 10²³ moléculas</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Hay 2.11 × 10²³ moléculas de CO₂ en 0.35 moles.</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 3: Conversión masa a partículas</h3>
+                    <p><strong>Problema:</strong> ¿Cuántos átomos de oxígeno hay en 25.0 g de Al₂(SO₄)₃?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos la masa molar del Al₂(SO₄)₃:
+                                <ul>
+                                    <li>Al: 2 × 26.982 g/mol = 53.964 g/mol</li>
+                                    <li>S: 3 × 32.065 g/mol = 96.195 g/mol</li>
+                                    <li>O: 12 × 16.00 g/mol = 192.00 g/mol</li>
+                                    <li>Masa molar Al₂(SO₄)₃ = 53.964 + 96.195 + 192.00 = 342.159 g/mol</li>
+                                </ul>
+                            </li>
+                            <li>Convertimos masa a moles:
+                                <p>Moles = 25.0 g ÷ 342.159 g/mol = 0.0731 mol</p>
+                            </li>
+                            <li>Calculamos el número de átomos de oxígeno:
+                                <p>En Al₂(SO₄)₃ hay 12 átomos de O por molécula</p>
+                                <p>Átomos de O = 0.0731 mol × 6.022 × 10²³ moléculas/mol × 12 átomos O/molécula</p>
+                                <p>Átomos de O = 0.0731 × 6.022 × 10²³ × 12 = 5.28 × 10²³ átomos</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Hay 5.28 × 10²³ átomos de oxígeno en 25.0 g de Al₂(SO₄)₃.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reacciones" class="teoria-section alternate-bg">
+            <div class="container">
+                <h2>Ejemplos de Estequiometría de Reacciones</h2>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 1: Cálculos mol a mol</h3>
+                    <p><strong>Problema:</strong> En la reacción 2Al + 3Cl₂ → 2AlCl₃, ¿cuántos moles de AlCl₃ se producirán a partir de 3.5 moles de Al?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Identificamos la relación molar entre Al y AlCl₃:
+                                <p>2 moles de Al producen 2 moles de AlCl₃</p>
+                                <p>Por lo tanto, 1 mol de Al produce 1 mol de AlCl₃</p>
+                            </li>
+                            <li>Calculamos los moles de AlCl₃:
+                                <p>Moles de AlCl₃ = 3.5 mol Al × (2 mol AlCl₃ / 2 mol Al)</p>
+                                <p>Moles de AlCl₃ = 3.5 mol Al × 1 = 3.5 mol AlCl₃</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Se producirán 3.5 moles de AlCl₃.</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 2: Cálculos masa a masa</h3>
+                    <p><strong>Problema:</strong> En la reacción 2KClO₃ → 2KCl + 3O₂, ¿cuántos gramos de O₂ se producirán a partir de 25.0 g de KClO₃?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos las masas molares:
+                                <ul>
+                                    <li>KClO₃: 39.10 + 35.45 + (3 × 16.00) = 122.55 g/mol</li>
+                                    <li>O₂: 2 × 16.00 = 32.00 g/mol</li>
+                                </ul>
+                            </li>
+                            <li>Convertimos la masa de KClO₃ a moles:
+                                <p>Moles de KClO₃ = 25.0 g ÷ 122.55 g/mol = 0.204 mol</p>
+                            </li>
+                            <li>Aplicamos la relación estequiométrica:
+                                <p>Moles de O₂ = 0.204 mol KClO₃ × (3 mol O₂ / 2 mol KClO₃) = 0.306 mol O₂</p>
+                            </li>
+                            <li>Convertimos los moles de O₂ a gramos:
+                                <p>Masa de O₂ = 0.306 mol × 32.00 g/mol = 9.79 g</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Se producirán 9.79 g de O₂.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="limitante" class="teoria-section">
+            <div class="container">
+                <h2>Ejemplos de Reactante Limitante</h2>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 1: Identificación del reactante limitante</h3>
+                    <p><strong>Problema:</strong> En la reacción N₂ + 3H₂ → 2NH₃, si se mezclan 28.0 g de N₂ y 8.0 g de H₂, ¿cuál es el reactante limitante?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos las masas molares:
+                                <ul>
+                                    <li>N₂: 2 × 14.01 = 28.02 g/mol</li>
+                                    <li>H₂: 2 × 1.008 = 2.016 g/mol</li>
+                                </ul>
+                            </li>
+                            <li>Convertimos las masas a moles:
+                                <p>Moles de N₂ = 28.0 g ÷ 28.02 g/mol = 0.999 mol</p>
+                                <p>Moles de H₂ = 8.0 g ÷ 2.016 g/mol = 3.97 mol</p>
+                            </li>
+                            <li>Comparamos con las proporciones estequiométricas:
+                                <p>Para 0.999 mol de N₂, se necesitan: 0.999 × 3 = 2.997 mol de H₂</p>
+                                <p>Tenemos disponibles 3.97 mol de H₂, más de lo necesario</p>
+                                <p>Para 3.97 mol de H₂, se necesitan: 3.97 ÷ 3 = 1.32 mol de N₂</p>
+                                <p>Pero solo tenemos 0.999 mol de N₂, menos de lo necesario</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> El N₂ es el reactante limitante porque se agotará primero.</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 2: Cálculo del producto formado</h3>
+                    <p><strong>Problema:</strong> En la reacción 2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O, si se mezclan 20.0 g de NaOH y 25.0 g de H₂SO₄, ¿cuántos gramos de Na₂SO₄ se formarán?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos las masas molares:
+                                <ul>
+                                    <li>NaOH: 23.00 + 16.00 + 1.008 = 40.01 g/mol</li>
+                                    <li>H₂SO₄: 2.016 + 32.07 + 64.00 = 98.09 g/mol</li>
+                                    <li>Na₂SO₄: 46.00 + 32.07 + 64.00 = 142.07 g/mol</li>
+                                </ul>
+                            </li>
+                            <li>Convertimos las masas a moles:
+                                <p>Moles de NaOH = 20.0 g ÷ 40.01 g/mol = 0.500 mol</p>
+                                <p>Moles de H₂SO₄ = 25.0 g ÷ 98.09 g/mol = 0.255 mol</p>
+                            </li>
+                            <li>Determinamos el reactante limitante:
+                                <p>Para 0.500 mol de NaOH, se necesitan: 0.500 ÷ 2 = 0.250 mol de H₂SO₄</p>
+                                <p>Tenemos disponibles 0.255 mol de H₂SO₄, suficiente para la reacción</p>
+                                <p>Para 0.255 mol de H₂SO₄, se necesitan: 0.255 × 2 = 0.510 mol de NaOH</p>
+                                <p>Tenemos 0.500 mol de NaOH, ligeramente menos de lo necesario</p>
+                                <p>Por lo tanto, el NaOH es el reactante limitante (por un margen muy pequeño)</p>
+                            </li>
+                            <li>Calculamos el Na₂SO₄ formado a partir del reactante limitante:
+                                <p>Moles de Na₂SO₄ = 0.500 mol NaOH × (1 mol Na₂SO₄ / 2 mol NaOH) = 0.250 mol</p>
+                                <p>Masa de Na₂SO₄ = 0.250 mol × 142.07 g/mol = 35.5 g</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Se formarán 35.5 g de Na₂SO₄.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rendimiento" class="teoria-section alternate-bg">
+            <div class="container">
+                <h2>Ejemplos de Rendimiento de Reacciones</h2>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 1: Cálculo del rendimiento porcentual</h3>
+                    <p><strong>Problema:</strong> En la reacción 4NH₃ + 5O₂ → 4NO + 6H₂O, se utilizaron 8.50 g de NH₃ y se obtuvieron 12.3 g de NO. ¿Cuál fue el rendimiento porcentual?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos las masas molares:
+                                <ul>
+                                    <li>NH₃: 14.01 + 3.024 = 17.03 g/mol</li>
+                                    <li>NO: 14.01 + 16.00 = 30.01 g/mol</li>
+                                </ul>
+                            </li>
+                            <li>Convertimos la masa de NH₃ a moles:
+                                <p>Moles de NH₃ = 8.50 g ÷ 17.03 g/mol = 0.499 mol</p>
+                            </li>
+                            <li>Calculamos el rendimiento teórico de NO:
+                                <p>Moles de NO = 0.499 mol NH₃ × (4 mol NO / 4 mol NH₃) = 0.499 mol NO</p>
+                                <p>Masa teórica de NO = 0.499 mol × 30.01 g/mol = 14.97 g</p>
+                            </li>
+                            <li>Calculamos el rendimiento porcentual:
+                                <p>Rendimiento porcentual = (Rendimiento real ÷ Rendimiento teórico) × 100%</p>
+                                <p>Rendimiento porcentual = (12.3 g ÷ 14.97 g) × 100% = 82.2%</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> El rendimiento porcentual fue de 82.2%.</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 2: Cálculo de la masa esperada con rendimiento conocido</h3>
+                    <p><strong>Problema:</strong> La reacción CaCO₃ → CaO + CO₂ tiene un rendimiento del 85%. ¿Cuántos gramos de CaO se obtendrán a partir de 50.0 g de CaCO₃?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos las masas molares:
+                                <ul>
+                                    <li>CaCO₃: 40.08 + 12.01 + 48.00 = 100.09 g/mol</li>
+                                    <li>CaO: 40.08 + 16.00 = 56.08 g/mol</li>
+                                </ul>
+                            </li>
+                            <li>Convertimos la masa de CaCO₃ a moles:
+                                <p>Moles de CaCO₃ = 50.0 g ÷ 100.09 g/mol = 0.500 mol</p>
+                            </li>
+                            <li>Calculamos el rendimiento teórico de CaO:
+                                <p>Moles de CaO = 0.500 mol CaCO₃ × (1 mol CaO / 1 mol CaCO₃) = 0.500 mol CaO</p>
+                                <p>Masa teórica de CaO = 0.500 mol × 56.08 g/mol = 28.04 g</p>
+                            </li>
+                            <li>Aplicamos el rendimiento porcentual:
+                                <p>Masa real esperada = Masa teórica × (% Rendimiento ÷ 100)</p>
+                                <p>Masa real esperada = 28.04 g × (85 ÷ 100) = 23.83 g</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Se obtendrán 23.83 g de CaO.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gases" class="teoria-section">
+            <div class="container">
+                <h2>Ejemplos de Estequiometría con Gases</h2>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 1: Volumen de gas en condiciones estándar</h3>
+                    <p><strong>Problema:</strong> En la reacción 2H₂O₂ → 2H₂O + O₂, ¿qué volumen de O₂ (en litros) se producirá a partir de 6.80 g de H₂O₂ en condiciones estándar (0°C, 1 atm)?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos la masa molar de H₂O₂:
+                                <p>H₂O₂: 2.016 + 32.00 = 34.02 g/mol</p>
+                            </li>
+                            <li>Convertimos la masa de H₂O₂ a moles:
+                                <p>Moles de H₂O₂ = 6.80 g ÷ 34.02 g/mol = 0.200 mol</p>
+                            </li>
+                            <li>Calculamos los moles de O₂ según la estequiometría:
+                                <p>Moles de O₂ = 0.200 mol H₂O₂ × (1 mol O₂ / 2 mol H₂O₂) = 0.100 mol O₂</p>
+                            </li>
+                            <li>Calculamos el volumen utilizando el volumen molar en condiciones estándar:
+                                <p>Volumen de O₂ = 0.100 mol × 22.4 L/mol = 2.24 L</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Se producirán 2.24 L de O₂ en condiciones estándar.</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 2: Volumen de gas en condiciones no estándar</h3>
+                    <p><strong>Problema:</strong> ¿Qué volumen de CO₂ (en litros) se producirá al reaccionar 5.00 g de CaCO₃ según la reacción CaCO₃ → CaO + CO₂, si las condiciones son 25°C y 0.950 atm?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos la masa molar de CaCO₃:
+                                <p>CaCO₃: 40.08 + 12.01 + 48.00 = 100.09 g/mol</p>
+                            </li>
+                            <li>Convertimos la masa de CaCO₃ a moles:
+                                <p>Moles de CaCO₃ = 5.00 g ÷ 100.09 g/mol = 0.0500 mol</p>
+                            </li>
+                            <li>Calculamos los moles de CO₂ según la estequiometría:
+                                <p>Moles de CO₂ = 0.0500 mol CaCO₃ × (1 mol CO₂ / 1 mol CaCO₃) = 0.0500 mol CO₂</p>
+                            </li>
+                            <li>Aplicamos la ley de los gases ideales (PV = nRT) para calcular el volumen:
+                                <p>V = nRT/P</p>
+                                <p>Donde: n = 0.0500 mol, R = 0.08206 L·atm/(mol·K), T = 25°C + 273.15 = 298.15 K, P = 0.950 atm</p>
+                                <p>V = (0.0500 mol × 0.08206 L·atm/(mol·K) × 298.15 K) ÷ 0.950 atm</p>
+                                <p>V = 1.29 L</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Se producirán 1.29 L de CO₂ en las condiciones dadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="soluciones" class="teoria-section alternate-bg">
+            <div class="container">
+                <h2>Ejemplos de Estequiometría en Soluciones</h2>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 1: Titulación ácido-base</h3>
+                    <p><strong>Problema:</strong> Se necesitan 24.5 mL de una solución de NaOH para neutralizar 20.0 mL de una solución de HCl 0.100 M según la reacción: HCl + NaOH → NaCl + H₂O. ¿Cuál es la molaridad de la solución de NaOH?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos los moles de HCl:
+                                <p>Moles de HCl = 20.0 mL × 0.100 mol/L × (1 L / 1000 mL) = 0.00200 mol</p>
+                            </li>
+                            <li>Aplicamos la relación estequiométrica:
+                                <p>Moles de NaOH = 0.00200 mol HCl × (1 mol NaOH / 1 mol HCl) = 0.00200 mol NaOH</p>
+                            </li>
+                            <li>Calculamos la molaridad de la solución de NaOH:
+                                <p>Molaridad = Moles / Volumen (en L)</p>
+                                <p>Molaridad NaOH = 0.00200 mol ÷ (24.5 mL × 1 L / 1000 mL) = 0.00200 mol ÷ 0.0245 L = 0.0816 M</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> La molaridad de la solución de NaOH es 0.0816 M.</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Ejemplo 2: Precipitación</h3>
+                    <p><strong>Problema:</strong> ¿Qué masa de AgCl se precipitará al mezclar 50.0 mL de AgNO₃ 0.150 M con 75.0 mL de NaCl 0.100 M según la reacción: AgNO₃ + NaCl → AgCl + NaNO₃?</p>
+                    
+                    <div class="solution">
+                        <h4>Solución:</h4>
+                        <ol>
+                            <li>Calculamos los moles de cada reactivo:
+                                <p>Moles de AgNO₃ = 50.0 mL × 0.150 mol/L × (1 L / 1000 mL) = 0.00750 mol</p>
+                                <p>Moles de NaCl = 75.0 mL × 0.100 mol/L × (1 L / 1000 mL) = 0.00750 mol</p>
+                            </li>
+                            <li>Determinamos el reactante limitante (en este caso ambos están en iguales cantidades):
+                                <p>Ambos reactivos proporcionan la misma cantidad de moles, así que cualquiera puede considerarse como limitante. Como la estequiometría es 1:1, se formarán 0.00750 mol de AgCl.</p>
+                            </li>
+                            <li>Calculamos la masa de AgCl:
+                                <p>Masa molar de AgCl = 107.87 + 35.45 = 143.32 g/mol</p>
+                                <p>Masa de AgCl = 0.00750 mol × 143.32 g/mol = 1.07 g</p>
+                            </li>
+                        </ol>
+                        <p><strong>Respuesta:</strong> Se precipitarán 1.07 g de AgCl.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="practice-link">
+                <p>¿Listo para poner a prueba tus conocimientos?</p>
+                <a href="practica.html" class="btn">Ir a ejercicios de práctica</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EstequiometríaWeb - Creado para ayudar a estudiantes a dominar la estequiometría</p>
+    </footer>
+
+    <script>
+        // Script para manejar el acordeón de ejemplos
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordionItem = this.parentElement;
+                    accordionItem.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* Estilos específicos para la página de teoría */
+
+/* Cabecera de la página */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Menú de navegación de teoría */
+.teoria-nav {
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.teoria-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+}
+
+.teoria-menu li {
+    margin: 0.5rem 1rem;
+}
+
+.teoria-menu a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.teoria-menu a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Secciones de teoría */
+.teoria-section {
+    padding: 4rem 0;
+    scroll-margin-top: 120px;
+}
+
+.alternate-bg {
+    background-color: #f5f7fa;
+}
+
+.teoria-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.teoria-section h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.teoria-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Cajas informativas */
+.info-box, .highlight-box, .example-box, .definition-box, .quote-box, .formula-box {
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    background-color: #e3f2fd;
+    border-left: 5px solid var(--primary-color);
+}
+
+.highlight-box {
+    background-color: #fffde7;
+    border-left: 5px solid #fbc02d;
+    font-size: 1.1rem;
+}
+
+.example-box {
+    background-color: #e8f5e9;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.definition-box {
+    background-color: #f3e5f5;
+    border-left: 5px solid #9c27b0;
+}
+
+.quote-box {
+    background-color: #eceff1;
+    border-left: 5px solid #607d8b;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.formula-box {
+    background-color: #fff3e0;
+    border-left: 5px solid #ff9800;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Grid de 2 columnas */
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.conversion-box {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista con viñetas personalizadas */
+.check-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.check-list li:before {
+    content: "✓";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Acordeón */
+.accordion {
+    margin: 2rem 0;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+}
+
+.accordion-header:after {
+    content: "+";
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+.accordion-item.active .accordion-header:after {
+    content: "-";
+}
+
+.accordion-content {
+    background-color: white;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+/* Estilos para imágenes */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.conversion-diagram {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.practice-link {
+    text-align: center;
+    margin: 3rem 0 1rem;
+}
+
+/* Solución de ejemplo */
+.solution {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .teoria-section {
+        padding: 2rem 0;
+    }
+    
+    .teoria-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .teoria-menu li {
+        margin: 0.3rem 0;
+    }
+    
+    .grid-2-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para MathJax */
+.MathJax {
+    font-size: 1.1rem !important;
+}

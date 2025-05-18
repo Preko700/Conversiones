@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría Estequiométrica | EstequiometríaWeb</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EstequiometríaWeb</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría</a></li>
+                <li><a href="calculadoras.html">Calculadoras</a></li>
+                <li><a href="ejemplos.html">Ejemplos</a></li>
+                <li><a href="practica.html">Práctica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Teoría Estequiométrica</h1>
+            <p>Comprende los fundamentos de la estequiometría química</p>
+        </section>
+
+        <div class="container">
+            <section class="features">
+                <div class="feature-card">
+                    <h2>Fundamentos</h2>
+                    <a href="#fundamentos" class="btn-secondary">Ver</a>
+                </div>
+                <div class="feature-card">
+                    <h2>El Mol y Masa Molar</h2>
+                    <a href="#mol" class="btn-secondary">Ver</a>
+                </div>
+                <div class="feature-card">
+                    <h2>Conversiones Básicas</h2>
+                    <a href="#conversiones" class="btn-secondary">Ver</a>
+                </div>
+                <div class="feature-card">
+                    <h2>Ecuaciones Químicas</h2>
+                    <a href="#ecuaciones" class="btn-secondary">Ver</a>
+                </div>
+                <div class="feature-card">
+                    <h2>Reactante Limitante</h2>
+                    <a href="#limitante" class="btn-secondary">Ver</a>
+                </div>
+                <div class="feature-card">
+                    <h2>Rendimiento</h2>
+                    <a href="#rendimiento" class="btn-secondary">Ver</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="calculator-container" id="fundamentos">
+            <h2>Fundamentos de la Estequiometría</h2>
+            
+            <p>La estequiometría es una rama de la química que estudia las relaciones cuantitativas entre los reactivos y productos en una reacción química. El término proviene del griego "stoicheion" (elemento) y "metron" (medida).</p>
+            
+            <div class="result-box visible">
+                <h3>¿Qué permite la estequiometría?</h3>
+                <ul>
+                    <li>Calcular las cantidades de reactivos necesarios para una reacción</li>
+                    <li>Predecir la cantidad de productos que se formarán</li>
+                    <li>Determinar el reactivo limitante en una reacción</li>
+                    <li>Calcular el rendimiento de una reacción</li>
+                    <li>Realizar conversiones entre diferentes unidades químicas</li>
+                </ul>
+            </div>
+            
+            <p>La base de todos los cálculos estequiométricos es la <strong>ley de conservación de la masa</strong>, propuesta por Antoine Lavoisier, que establece que la masa total de los reactivos debe ser igual a la masa total de los productos.</p>
+            
+            <blockquote>
+                "En la naturaleza nada se crea, nada se pierde, todo se transforma." - Antoine Lavoisier
+            </blockquote>
+        </div>
+
+        <div class="calculator-container" id="mol">
+            <h2>El Mol y la Masa Molar</h2>
+            
+            <p>El <strong>mol</strong> es la unidad fundamental en estequiometría. Un mol representa una cantidad específica de entidades (átomos, moléculas, iones, etc.), exactamente \(6.022 \times 10^{23}\) entidades, conocido como el <strong>número de Avogadro</strong>.</p>
+            
+            <div class="result-box visible">
+                <p>1 mol = \(6.022 \times 10^{23}\) entidades (átomos, moléculas, iones)</p>
+            </div>
+            
+            <p>La <strong>masa molar</strong> es la masa de un mol de una sustancia, expresada en gramos por mol (g/mol). Para calcularla, sumamos las masas atómicas de todos los átomos en la fórmula química.</p>
+            
+            <div class="result-box visible">
+                <h3>Ejemplo: Cálculo de masa molar</h3>
+                <p>Para \(H_2O\):</p>
+                <ul>
+                    <li>2 átomos de H: 2 × 1.008 g/mol = 2.016 g/mol</li>
+                    <li>1 átomo de O: 1 × 16.00 g/mol = 16.00 g/mol</li>
+                    <li>Masa molar de \(H_2O\) = 2.016 + 16.00 = 18.016 g/mol</li>
+                </ul>
+            </div>
+            
+            <p>Conocer la masa molar nos permite convertir entre masas (gramos) y cantidad de sustancia (moles):</p>
+            
+            <div class="result-box visible">
+                <p>Moles = \(\frac{\text{Masa (g)}}{\text{Masa molar (g/mol)}}\)</p>
+                <p>Masa = Moles × Masa molar</p>
+            </div>
+        </div>
+
+        <div class="calculator-container" id="conversiones">
+            <h2>Conversiones Estequiométricas Básicas</h2>
+            
+            <p>Las conversiones estequiométricas básicas implican transformar entre diferentes unidades químicas.</p>
+            
+            <table>
+                <tr>
+                    <th>Tipo de conversión</th>
+                    <th>Fórmula</th>
+                </tr>
+                <tr>
+                    <td>Masa a moles</td>
+                    <td>\(\text{Moles} = \frac{\text{Masa (g)}}{\text{Masa molar (g/mol)}}\)</td>
+                </tr>
+                <tr>
+                    <td>Moles a masa</td>
+                    <td>\(\text{Masa (g)} = \text{Moles} \times \text{Masa molar (g/mol)}\)</td>
+                </tr>
+                <tr>
+                    <td>Moles a partículas</td>
+                    <td>\(\text{Partículas} = \text{Moles} \times 6.022 \times 10^{23}\)</td>
+                </tr>
+                <tr>
+                    <td>Partículas a moles</td>
+                    <td>\(\text{Moles} = \frac{\text{Número de partículas}}{6.022 \times 10^{23}}\)</td>
+                </tr>
+                <tr>
+                    <td>Volumen a moles (gases, STP)</td>
+                    <td>\(\text{Moles} = \frac{\text{Volumen (L)}}{22.4 \text{ L/mol}}\)</td>
+                </tr>
+                <tr>
+                    <td>Moles a volumen (gases, STP)</td>
+                    <td>\(\text{Volumen (L)} = \text{Moles} \times 22.4 \text{ L/mol}\)</td>
+                </tr>
+            </table>
+            
+            <div class="form-group">
+                <a href="calculadoras.html#conversiones" class="btn">Practicar conversiones</a>
+            </div>
+        </div>
+
+        <div class="calculator-container" id="ecuaciones">
+            <h2>Ecuaciones Químicas y Balanceo</h2>
+            
+            <p>Las <strong>ecuaciones químicas</strong> representan las reacciones químicas mediante símbolos y fórmulas. Una ecuación correctamente balanceada es la base para todos los cálculos estequiométricos.</p>
+            
+            <div class="result-box visible">
+                <h3>Ejemplo de ecuación balanceada:</h3>
+                <p>\(2H_2 + O_2 \rightarrow 2H_2O\)</p>
+                <p>Esta ecuación indica que:</p>
+                <ul>
+                    <li>2 moles de hidrógeno reaccionan con 1 mol de oxígeno</li>
+                    <li>Producen 2 moles de agua</li>
+                </ul>
+            </div>
+            
+            <h3>Interpretación de ecuaciones químicas:</h3>
+            
+            <div class="result-box visible">
+                <p>Una ecuación química balanceada nos proporciona:</p>
+                <ul>
+                    <li><strong>Relaciones molares:</strong> Los coeficientes indican la proporción molar entre reactivos y productos</li>
+                    <li><strong>Conservación de átomos:</strong> El número de átomos de cada elemento debe ser igual en ambos lados</li>
+                    <li><strong>Base para cálculos:</strong> Permite establecer relaciones estequiométricas entre todas las sustancias involucradas</li>
+                </ul>
+            </div>
+            
+            <h3>Métodos para balancear ecuaciones:</h3>
+            
+            <div class="result-box visible">
+                <h4>Método de tanteo (simple)</h4>
+                <p>Consiste en ajustar los coeficientes por ensayo y error hasta que el número de átomos de cada elemento sea igual en ambos lados de la ecuación.</p>
+                <ol>
+                    <li>Identifica todos los elementos presentes</li>
+                    <li>Comienza ajustando el elemento que aparece en menor número de compuestos</li>
+                    <li>Continúa con los demás elementos</li>
+                    <li>Verifica que todos los elementos estén balanceados</li>
+                </ol>
+            </div>
+            
+            <div class="result-box visible">
+                <h4>Método algebraico</h4>
+                <p>Se asignan variables a los coeficientes y se plantea un sistema de ecuaciones que representa la conservación de átomos.</p>
+            </div>
+            
+            <div class="result-box visible">
+                <h4>Método redox (para reacciones de oxidación-reducción)</h4>
+                <p>Se identifican los cambios en los estados de oxidación y se balancean los electrones transferidos.</p>
+            </div>
+        </div>
+
+        <div class="calculator-container" id="limitante">
+            <h2>Reactante Limitante y Reactante en Exceso</h2>
+            
+            <p>En la mayoría de las reacciones químicas, los reactivos no se mezclan exactamente en las proporciones estequiométricas requeridas. Esto lleva a los conceptos de <strong>reactante limitante</strong> y <strong>reactante en exceso</strong>.</p>
+            
+            <div class="result-box visible">
+                <h3>Definiciones:</h3>
+                <p><strong>Reactante limitante:</strong> Es el reactivo que se consume completamente primero y determina la cantidad máxima de producto que puede formarse.</p>
+                <p><strong>Reactante en exceso:</strong> Es el reactivo que queda parcialmente sin reaccionar cuando el reactante limitante se ha consumido por completo.</p>
+            </div>
+            
+            <h3>¿Por qué es importante identificar el reactante limitante?</h3>
+            
+            <ul>
+                <li>Determina la cantidad máxima de producto que puede formarse</li>
+                <li>Permite calcular la cantidad de reactantes en exceso que quedarán sin reaccionar</li>
+                <li>Es esencial para calcular el rendimiento de la reacción</li>
+                <li>Tiene implicaciones económicas en procesos industriales</li>
+            </ul>
+            
+            <div class="result-box visible">
+                <h3>Ejemplo: Determinación del reactante limitante</h3>
+                <p>Para la reacción: \(2Al + 3Cl_2 \rightarrow 2AlCl_3\)</p>
+                <p>Si tenemos 5.4 g de Al y 12.0 g de Cl₂, ¿cuál es el reactante limitante?</p>
+                
+                <div>
+                    <p><strong>Solución:</strong></p>
+                    <ol>
+                        <li>Calcular moles de cada reactante:
+                            <ul>
+                                <li>Moles de Al = 5.4 g ÷ 26.98 g/mol = 0.20 mol</li>
+                                <li>Moles de Cl₂ = 12.0 g ÷ 70.90 g/mol = 0.17 mol</li>
+                            </ul>
+                        </li>
+                        <li>Comparar con las proporciones estequiométricas:
+                            <ul>
+                                <li>Según la ecuación: 2 mol Al : 3 mol Cl₂</li>
+                                <li>Proporción ideal para 0.20 mol de Al: 0.20 × (3/2) = 0.30 mol de Cl₂</li>
+                                <li>Proporción ideal para 0.17 mol de Cl₂: 0.17 × (2/3) = 0.11 mol de Al</li>
+                                <li>Tenemos 0.20 mol de Al, pero solo 0.17 mol de Cl₂</li>
+                                <li>El Cl₂ requeriría 0.11 mol de Al, pero tenemos 0.20 mol</li>
+                            </ul>
+                        </li>
+                        <li>Conclusión: El Cl₂ es el reactante limitante, porque se requeriría 0.30 mol pero solo hay 0.17 mol disponibles.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <a href="calculadoras.html#limitante" class="btn">Calcular reactante limitante</a>
+            </div>
+        </div>
+
+        <div class="calculator-container" id="rendimiento">
+            <h2>Rendimiento de Reacciones</h2>
+            
+            <p>El <strong>rendimiento</strong> es una medida de la eficiencia de una reacción química. Se expresa comúnmente como un porcentaje de la cantidad teórica calculada.</p>
+            
+            <div class="result-box visible">
+                <h3>Tipos de rendimiento:</h3>
+                <ul>
+                    <li><strong>Rendimiento teórico:</strong> Es la cantidad máxima de producto que podría formarse según la estequiometría, asumiendo que todo el reactante limitante se convierte en producto.</li>
+                    <li><strong>Rendimiento real (experimental):</strong> Es la cantidad de producto que realmente se obtiene en el laboratorio.</li>
+                    <li><strong>Rendimiento porcentual:</strong> Es la relación entre el rendimiento real y el teórico, expresada como porcentaje.</li>
+                </ul>
+            </div>
+            
+            <div class="result-box visible">
+                <h3>Fórmula del rendimiento porcentual:</h3>
+                <p>\(\text{Rendimiento porcentual} = \frac{\text{Rendimiento real}}{\text{Rendimiento teórico}} \times 100\%\)</p>
+            </div>
+            
+            <p>El rendimiento porcentual casi siempre es menor que 100% debido a varios factores:</p>
+            <ul>
+                <li>Reacciones secundarias que consumen reactivos</li>
+                <li>Reacciones incompletas (equilibrio)</li>
+                <li>Pérdidas durante la manipulación, filtración o purificación</li>
+                <li>Impurezas en los reactivos</li>
+            </ul>
+            
+            <div class="form-group">
+                <a href="calculadoras.html#rendimiento" class="btn">Calcular rendimiento</a>
+            </div>
+        </div>
+
+        <div class="calculator-container">
+            <h2>Recursos Adicionales</h2>
+            <p>Para complementar tu aprendizaje, te recomendamos:</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Ejemplos Resueltos</h3>
+                    <p>Revisa ejemplos paso a paso de todos los tipos de problemas estequiométricos.</p>
+                    <a href="ejemplos.html" class="btn-secondary">Ver ejemplos</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Ejercicios de Práctica</h3>
+                    <p>Pon a prueba tus conocimientos con ejercicios de dificultad progresiva.</p>
+                    <a href="practica.html" class="btn-secondary">Practicar</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Calculadoras</h3>
+                    <p>Utiliza nuestras calculadoras para resolver problemas estequiométricos paso a paso.</p>
+                    <a href="calculadoras.html" class="btn-secondary">Usar calculadoras</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EstequiometríaWeb - Creado para ayudar a estudiantes a dominar la estequiometría</p>
+    </footer>
+
+    <script>
+        // Script para manejar el desplazamiento suave a las secciones
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener todos los enlaces que apuntan a anclas
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            // Agregar manejador de eventos a cada enlace
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Obtener el destino del enlace
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Desplazamiento suave
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Compensar la altura del encabezado
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
